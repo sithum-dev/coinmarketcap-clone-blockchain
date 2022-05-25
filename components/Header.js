@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { SearchIcon } from '@heroicons/react/solid'
+import { ConnectButton } from 'web3uikit'
 
 function Header() {
   const [isModalOpen, setModalOpen] = useState(false)
@@ -61,7 +62,7 @@ function Header() {
         </div>
       </nav>
       <div className="hidden items-center md:flex">
-        {/* <ConnectButton /> */}
+        <ConnectButton />
         <div className="flex items-center justify-center rounded bg-[#171924] p-2">
           <SearchIcon className="h-5 w-5" />
           <input
@@ -153,6 +154,9 @@ function Header() {
                       <div className="relative mr-1 cursor-pointer hover:opacity-60">
                         <div className="mx-[10px] flex text-white">Learn</div>
                       </div>
+                    </div>
+                    <div className="flex items-center justify-center gap-[20px]">
+                      <ConnectButton />
                     </div>
                   </nav>
                 </div>
