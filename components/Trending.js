@@ -1,11 +1,11 @@
 import { useState } from 'react'
-// import Rate from './cmc-table/rate'
+import Rate from './cmc-table/Rate'
 import fire from '../assets/fire.png'
 import btc from '../assets/btc.png'
 import usdt from '../assets/usdt.png'
 import gainers from '../assets/gainers.png'
 import recent from '../assets/recent.png'
-import TrendingCard from './trendingCard'
+import TrendingCard from './TrendingCard'
 import ReactSwitch from 'react-switch'
 
 const Trending = () => {
@@ -39,15 +39,16 @@ const Trending = () => {
   ]
 
   return (
-    <div className="text-white">
+    <div className="mt-4 px-3 text-white">
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex justify-between">
-          <h1 className="text-3xl text-white">
+          <h1 className="text-xl text-white md:text-3xl">
             Todays Cryptocurrency Prices by Market Cap
           </h1>
-
-          <div className="flex">
-            <p className="text-gray-400 ">Highlights &nbsp;</p>
+          <div className="flex items-center">
+            <p className="hidden text-sm text-gray-400 md:block md:text-base">
+              Highlights &nbsp;
+            </p>
             <ReactSwitch
               checked={checked}
               onChange={() => {
@@ -57,21 +58,19 @@ const Trending = () => {
           </div>
         </div>
         <br />
-        <div className="flex">
-          <p>The global crypto market cap is $1.74T, a &nbsp; </p>
-          <span>
-            {' '}
-            <Rate isIncrement={true} rate="0.53%" />{' '}
-          </span>
-          <p>
-            {' '}
-            &nbsp; decrease over the last day.{' '}
-            <span className="underline">Read More</span>{' '}
+        <div className="md:flex">
+          <p>The global crypto market cap is $1.27T, &nbsp;</p>
+          <p className="flex">
+            a{' '}
+            <span className="flex">
+              <Rate isIncrement={true} rate="0.53%" />
+            </span>
+            &nbsp; decrease over the last day.&nbsp;
+            <span className="cursor-pointer underline">Read More</span>
           </p>
         </div>
         <br />
-
-        <div className="flex items-center">
+        <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-3">
           <TrendingCard
             title="Trending"
             icon={fire}
