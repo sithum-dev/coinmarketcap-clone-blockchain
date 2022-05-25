@@ -7,7 +7,7 @@ const Rate = ({ isIncrement, rate }) => {
       {isIncrement ? (
         <ChevronUpIcon className="h-5 w-5" fill="#17C784" />
       ) : (
-        <ChevronDownIcon fill="#EA3943" />
+        <ChevronDownIcon className="h-5 w-5" fill="#EA3943" />
       )}
       <p className={isIncrement ? 'text-[#17C784]' : 'text-[#EA3943]'}>
         {rate}
