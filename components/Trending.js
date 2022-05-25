@@ -39,7 +39,7 @@ const Trending = () => {
   ]
 
   return (
-    <div className="mt-4 px-3 text-white">
+    <div className="px-3 text-white">
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex justify-between">
           <h1 className="text-xl text-white md:text-3xl">

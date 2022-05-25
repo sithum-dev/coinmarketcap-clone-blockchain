@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Trending from '../components/Trending'
+import CmcTable from '../components/cmc-table/CmcTable'
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +13,10 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Header />
+        <div className="mt-4 " />
         <Trending />
+        <div className="mt-4 " />
+        <CmcTable />
       </main>
     </div>
   )
