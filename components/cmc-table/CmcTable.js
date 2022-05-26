@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState, useCallback } from 'react'
 import btc from '../../assets/btc.png'
 import { CoinMarketContext } from '../../context/context'
-// import CMCtableHeader from './cmcTableHeader'
-// import CMCtableRow from './cmcTableRow'
+import CMCtableHeader from './CmcTableHeader'
+import CMCtableRow from './CmcTableRow'
 
 const CMCtable = () => {
   let { getTopTenCoins } = useContext(CoinMarketContext)
@@ -31,10 +31,10 @@ const CMCtable = () => {
   console.log(coinData)
 
   return (
-    <div className="font-bold text-white">
+    <div className="px-2 font-bold text-white">
       <div className="mx-auto max-w-screen-2xl">
-        <table className="w-full">
-          {/* <CMCtableHeader />
+        <table className="w-full text-xs md:text-sm">
+          <CMCtableHeader />
 
           {coinData && coinData ? (
             coinData.map((coin, index) => {
@@ -59,7 +59,7 @@ const CMCtable = () => {
             })
           ) : (
             <></>
-          )} */}
+          )}
         </table>
       </div>
     </div>
