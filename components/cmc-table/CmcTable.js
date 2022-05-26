@@ -32,10 +32,9 @@ const CMCtable = () => {
 
   return (
     <div className="px-2 font-bold text-white">
-      <div className="mx-auto max-w-screen-2xl">
-        <table className="w-full text-xs md:text-sm">
+      <div className="scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-w-2 scrolling-touch overflow-x-auto">
+        <table className="payment-table w-full border-separate space-y-3 text-xs text-gray-400">
           <CMCtableHeader />
-
           {coinData && coinData ? (
             coinData.map((coin, index) => {
               return (

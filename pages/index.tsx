@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <Header />
         <div className="mt-4 " />
         <Trending />
-        <div className="mt-4 " />
+        <div className="mt-10 " />
         <CmcTable />
       </main>
     </div>
