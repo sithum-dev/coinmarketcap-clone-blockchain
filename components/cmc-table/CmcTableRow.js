@@ -5,10 +5,6 @@ import CoinNameRow from './CoinNameRow'
 import Rate from './Rate'
 import { useRouter } from 'next/router'
 
-const styles = {
-  tableRow: `text-white border-b border-gray-800 text-[0.93rem]`,
-}
-
 const CmcTableRow = ({
   starNum,
   coinName,
@@ -63,7 +59,7 @@ const CmcTableRow = ({
   }
 
   return (
-    <tbody className={styles.tableRow}>
+    <tbody className="border-b border-gray-800 text-sm font-normal text-white md:text-base">
       <tr>
         <td>
           <Star />
@@ -71,7 +67,7 @@ const CmcTableRow = ({
         <td>{starNum}</td>
 
         {coinIcon && coinIcon ? (
-          <td className="cursor-pointer">
+          <td>
             <CoinNameRow
               name={coinName}
               icon={coinIcon}

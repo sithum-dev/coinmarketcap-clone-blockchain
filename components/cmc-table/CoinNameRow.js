@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-const CoinNameRow = ({ name, icon }) => {
+const CoinNameRow = ({ name, icon, clicked }) => {
   return (
-    <div className="flex">
+    <div className="flex cursor-pointer gap-2" onClick={clicked}>
       <Image src={icon} alt={name} width={20} height={20} />
       <p>{name}</p>
     </div>
