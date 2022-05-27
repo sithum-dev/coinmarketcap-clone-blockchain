@@ -196,7 +196,7 @@ const CMCpriceConverter = ({
       </div>
 
       <div
-        className="mt-5 w-min cursor-pointer rounded-xl bg-[#1d4ed8] p-2 px-5 hover:opacity-60"
+        className="mt-5 ml-auto w-min cursor-pointer rounded-xl bg-[#1d4ed8] p-2 px-5 hover:opacity-60"
         // onClick={convertCrypto}
       >
         Convert

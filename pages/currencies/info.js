@@ -4,7 +4,7 @@ import Header from '../../components/Header'
 import solana from '../../assets/solana.png'
 import Usd from '../../assets/svg/usd'
 import { useEffect, useState } from 'react'
-// import Graph from '../../components/graph'
+import Graph from '../../components/Graph'
 // import Chat from '../../components/chat'
 
 const Currencies = () => {
@@ -28,18 +28,18 @@ const Currencies = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="mx-auto max-w-screen-2xl text-white">
-        <div className="flex items-start">
-          <div className="w-2/3 p-10 pl-0 pr-0">
-            <div className="flex justify-between">
-              <div className="flex items-center rounded-xl border border-gray-500/10 bg-[#222531] p-2 text-sm">
+      <main className="mx-6 max-w-screen-2xl text-white">
+        <div className="grid grid-cols-1 items-start md:grid-cols-3">
+          <div className="p-10 pl-0 pr-0 md:col-span-2">
+            <div className="flex flex-col justify-between gap-2 md:flex-row">
+              <div className="flex items-center justify-between rounded-xl border border-gray-500/10 bg-[#222531] p-2 text-sm">
                 <p className="mr-2 rounded-lg bg-[#171924] p-1 px-2">Price</p>
                 <p className="px-2">Market Cap</p>
                 <p className="px-2">Trading View</p>
                 <p className="px-2">History</p>
               </div>
 
-              <div className="flex items-center rounded-xl border border-gray-500/10 bg-[#222531] p-2 text-sm">
+              <div className="flex items-center justify-between rounded-xl border border-gray-500/10 bg-[#222531] p-2 text-sm">
                 <p className="mr-2 rounded-lg bg-[#171924] p-1 px-2">1D</p>
                 <p className="px-2">2D</p>
                 <p className="px-2">1M</p>
@@ -51,7 +51,7 @@ const Currencies = () => {
               </div>
             </div>
             <br />
-            {/* <Graph /> */}
+            <Graph />
             <br />
             <div className="flex items-center justify-between">
               <div className="flex">
@@ -82,7 +82,7 @@ const Currencies = () => {
             />
           </div>
 
-          <div className="ml-5 pt-10">{/* <Chat /> */}</div>
+          <div className="ml-5 pt-10">{/* <Chat /> */}chat</div>
         </div>
       </main>
     </div>
