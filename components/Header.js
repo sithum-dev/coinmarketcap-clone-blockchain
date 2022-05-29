@@ -62,7 +62,6 @@ function Header() {
         </div>
       </nav>
       <div className="hidden items-center md:flex">
-        <ConnectButton />
         <div className="flex items-center justify-center rounded bg-[#171924] p-2">
           <SearchIcon className="h-5 w-5" />
           <input
@@ -70,6 +69,7 @@ function Header() {
             placeholder="Search"
           />
         </div>
+        <ConnectButton />
       </div>
       {/* Mobile Nav */}
       <div className="md:hidden">
