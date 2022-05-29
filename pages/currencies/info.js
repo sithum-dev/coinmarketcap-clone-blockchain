@@ -28,7 +28,7 @@ const Currencies = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="mx-6 max-w-screen-2xl text-white">
+      <main className="mx-auto max-w-screen-2xl px-6 text-white">
         <CoinDetails
           coinName={coinName}
           price={price}

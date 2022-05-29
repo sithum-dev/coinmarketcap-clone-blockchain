@@ -1,4 +1,12 @@
 import Image from 'next/image'
+import { StarIcon } from '@heroicons/react/outline'
+import {
+  LinkIcon,
+  SearchIcon,
+  UserGroupIcon,
+  CodeIcon,
+  DocumentIcon,
+} from '@heroicons/react/outline'
 import DropdownBtn from './buttons/DropDownBtn'
 import Rate from './cmc-table/Rate'
 import RateFilled from './buttons/RateFilled'
@@ -140,68 +148,71 @@ const CoinDetails = ({ coinName, coinSymbol, price }) => {
   }
 
   return (
-    <main className="min-h-screen text-white">
+    <main className="text-white">
       <div>
-        <div className="coin-details m-auto flex max-w-screen-2xl pt-20">
+        <div className="m-auto grid grid-cols-1 pt-10 md:grid-cols-3">
           <div className="flex w-fit flex-col">
-            <div className="flex items-center">
+            <div className="flex items-center pb-4">
               {coinIcon()}
               &nbsp; &nbsp;
               <div>
-                <div className="flex">
+                <div className="flex items-center gap-2">
                   <p className="text-3xl">{coinName}</p>
                   &nbsp; &nbsp;&nbsp; &nbsp;
-                  <p className="flex items-center rounded-xl bg-slate-800 px-2">
+                  <p className="flex items-center rounded-md bg-slate-800 px-4 py-2">
                     {coinSymbol}
                   </p>
+                  <div className="cursor-pointer rounded-md bg-slate-800 px-4 py-2">
+                    <StarIcon className="h-5 w-5" />
+                  </div>
                 </div>
               </div>
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className="mt-3 flex flex-wrap">
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+            <div className="mt-3 flex flex-wrap text-sm">
+              <div className="mr-3 mb-3 flex cursor-pointer items-center gap-1 rounded-md bg-slate-800 px-3 py-1">
+                <LinkIcon className="h-4 w-4" />
                 solana.com
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 flex cursor-pointer items-center gap-1 rounded-md bg-slate-800 px-3 py-1">
+                <SearchIcon className="h-4 w-4" />
                 Explorers
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 flex cursor-pointer items-center gap-1 rounded-md bg-slate-800 px-3 py-1">
+                <UserGroupIcon className="h-4 w-4" />
                 Community
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 flex cursor-pointer items-center gap-1 rounded-md bg-slate-800 px-3 py-1">
                 Chat
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 flex cursor-pointer items-center gap-1 rounded-md bg-slate-800 px-3 py-1">
+                <CodeIcon className="h-4 w-4" />
                 Source code
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 flex cursor-pointer items-center gap-1 rounded-md bg-slate-800 px-3 py-1">
+                <DocumentIcon className="h-4 w-4" />
                 Whitepaper
               </div>
             </div>
             <br />
-            Topics
-            <div className={['mt-3 flex flex-wrap', 'topics']}>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+            Tags:
+            <div className="mt-3 flex flex-wrap text-sm">
+              <div className="mr-3 mb-3 rounded-md bg-slate-800 px-3 py-1">
                 Mineable
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 rounded-md bg-slate-800 px-3 py-1">
                 PoW
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 rounded-md bg-slate-800 px-3 py-1">
                 SHA-256
               </div>
-              <div className="mr-3 mb-3 rounded-xl bg-slate-800 px-3 py-1">
+              <div className="mr-3 mb-3 rounded-md bg-slate-800 px-3 py-1">
                 Store of value
               </div>
             </div>
           </div>
 
-          <div className="-ml-16">
-            <div className="flex w-full items-start justify-between">
+          <div className="col-span-2">
+            <div className="grid w-full grid-cols-1 items-start  justify-between gap-4 md:grid-cols-2">
               <div>
                 <p className="text-gray-400">
                   {coinName} ({coinSymbol})
@@ -222,7 +233,7 @@ const CoinDetails = ({ coinName, coinSymbol, price }) => {
                 </div>
               </div>
 
-              <div className="flex">
+              <div className="flex gap-1">
                 <DropdownBtn label="Buy" />
                 <DropdownBtn label="Exchange" />
                 <DropdownBtn label="Gaming" />
