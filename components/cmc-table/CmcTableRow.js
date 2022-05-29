@@ -48,12 +48,6 @@ const CmcTableRow = ({
     )
   }
 
-  const viewPrice = () => {
-    router.push(
-      `/currencies/price?symbol=${coinSymbol}&coin=${coinName}&price=${price}`
-    )
-  }
-
   const formatNum = (num) => {
     return Number(num.toFixed(2)).toLocaleString()
   }
@@ -78,7 +72,7 @@ const CmcTableRow = ({
           <></>
         )}
 
-        <td className="cursor-pointer" onClick={viewPrice}>
+        <td className="cursor-pointer" onClick={viewCoinDetails}>
           <p>${formatNum(price)}</p>
         </td>
         <td>
