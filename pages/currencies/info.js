@@ -66,7 +66,9 @@ const Currencies = () => {
 
               <p>
                 Want more data?{' '}
-                <span className="text-[#6188FF]">Check out our API</span>
+                <span className="cursor-pointer text-[#6188FF]">
+                  Check out our API
+                </span>
               </p>
             </div>
             <br />
