@@ -157,7 +157,7 @@ const CMCpriceConverter = ({
 
   return (
     <div>
-      <h2>
+      <h2 className="text-center">
         {fromSymbol} to {toSymbol} Converter
       </h2>
       <br />
