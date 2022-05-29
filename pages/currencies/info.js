@@ -1,11 +1,11 @@
 import CMCpriceConverter from '../../components/PriceConverter'
-
+import CoinDetails from '../../components/CoinDetails'
 import Header from '../../components/Header'
 import solana from '../../assets/solana.png'
 import Usd from '../../assets/svg/usd'
 import { useEffect, useState } from 'react'
 import Graph from '../../components/Graph'
-import Chat from '../../components/Chat'
+// import Chat from '../../components/Chat'
 
 const Currencies = () => {
   const [coinName, setCoinName] = useState('')
@@ -29,6 +29,11 @@ const Currencies = () => {
     <div className="min-h-screen">
       <Header />
       <main className="mx-6 max-w-screen-2xl text-white">
+        <CoinDetails
+          coinName={coinName}
+          price={price}
+          coinSymbol={coinSymbol}
+        />
         <div className="grid grid-cols-1 items-start md:grid-cols-3">
           <div className="p-10 pl-0 pr-0 md:col-span-2">
             <div className="flex flex-col justify-between gap-2 md:flex-row">
@@ -84,9 +89,7 @@ const Currencies = () => {
             />
           </div>
 
-          <div className="ml-5 pt-10">
-            <Chat />
-          </div>
+          <div className="ml-5 pt-10">{/* <Chat /> */}</div>
         </div>
       </main>
     </div>
