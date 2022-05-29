@@ -1,10 +1,6 @@
-const styles = {
-  button: `bg-[#6188FF] px-5 py-2 rounded-lg`,
-}
-
 const Button = ({ label, onPress }) => {
   return (
-    <button className={styles.button} onClick={onPress}>
+    <button className="rounded-lg bg-[#6188FF] px-5 py-2" onClick={onPress}>
       {label}
     </button>
   )

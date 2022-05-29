@@ -4,7 +4,7 @@ import { faker } from '@faker-js/faker'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import ChatCard from './chatCard'
-import Button from './button'
+import Button from './Button'
 import shiba from '../assets/shiba.png'
 import Image from 'next/image'
 
@@ -74,8 +74,8 @@ const Chat = () => {
                 <Image alt="" src={shiba} width={70} height={70} />
               </div>
               <div className="mr-10 text-left">
-                <b>Drak</b>
-                <p className="text-gray-400">@drakosi</p>
+                <b>Sithum Dev</b>
+                <p className="text-gray-400">@sithum_dev</p>
               </div>
             </div>
 
