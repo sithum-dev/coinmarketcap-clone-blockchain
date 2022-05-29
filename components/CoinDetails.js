@@ -233,7 +233,7 @@ const CoinDetails = ({ coinName, coinSymbol, price }) => {
                 </div>
               </div>
 
-              <div className="flex gap-1">
+              <div className="flex flex-wrap gap-1">
                 <DropdownBtn label="Buy" />
                 <DropdownBtn label="Exchange" />
                 <DropdownBtn label="Gaming" />
@@ -241,77 +241,83 @@ const CoinDetails = ({ coinName, coinSymbol, price }) => {
               </div>
             </div>
 
-            <div className="mt-10 flex justify-between border-t border-gray-800 p-4">
-              <div>
+            <div className="mt-10 grid grid-cols-1 justify-between border-t border-gray-800 md:grid-cols-4 md:p-4">
+              <div className="border-b border-gray-800 px-2 py-4 md:border-none">
                 <div>
-                  <small className="mr-2 whitespace-nowrap text-gray-400">
+                  <p className="mr-2 whitespace-nowrap text-gray-400">
                     Market Cap
-                  </small>
+                  </p>
                 </div>
-                <small>$731,935,983,865</small>
-                <Rate isIncrement={true} rate="0.53%" />
+                <div className="flex gap-2 pt-2 md:block">
+                  <p>$731,935,983,865</p>
+                  <Rate isIncrement={true} rate="0.53%" />
+                </div>
               </div>
 
-              <div className="ml-10 w-full border-l border-gray-800 pl-5">
+              <div className="w-full border-b border-gray-800 py-4 px-2 md:ml-10 md:border-b-0 md:border-l">
                 <div>
-                  <small className="mr-2 whitespace-nowrap text-gray-400">
+                  <p className="mr-2 whitespace-nowrap text-gray-400">
                     Fully Diluted Market Cap
-                  </small>
+                  </p>
                 </div>
-                <small>$811,236,224,810</small>
-                <Rate isIncrement={true} rate="0.53%" />
+                <div className="flex gap-2 pt-2 md:block">
+                  <p>$811,236,224,810</p>
+                  <Rate isIncrement={true} rate="0.53%" />
+                </div>
               </div>
 
-              <div className="ml-10 w-full border-l border-gray-800 pl-5">
+              <div className="w-full border-b border-gray-800 py-4 px-2 md:ml-10 md:border-b-0 md:border-l">
                 <div>
                   <div>
-                    <small className="mr-2 whitespace-nowrap text-gray-400">
-                      Volume &nbsp;<small className="coin-symbol"> BTC</small>{' '}
-                    </small>
+                    <p className="mr-2 whitespace-nowrap text-gray-400">
+                      Volume &nbsp;<p className="coin-symbol"> BTC</p>{' '}
+                    </p>
                   </div>
-                  <small>$24,143,176,324</small>
-                  <Rate isIncrement={true} rate="0.92%" />
+                  <div className="flex gap-2 pt-2 md:block">
+                    <p>$24,143,176,324</p>
+                    <Rate isIncrement={true} rate="0.92%" />
+                  </div>
                 </div>
                 <br />
                 <div>
                   <div>
-                    <small className="mr-2 whitespace-nowrap text-gray-400">
+                    <p className="mr-2 whitespace-nowrap text-gray-400">
                       Volume / Market Cap
-                    </small>
+                    </p>
                   </div>
-                  <small>0.03315</small>
+                  <p>0.03315</p>
                 </div>
               </div>
 
-              <div className="ml-10 w-full border-l border-gray-800 pl-5">
+              <div className="w-full border-b border-gray-800 py-4 px-2 md:ml-10 md:border-b-0 md:border-l">
                 <div>
                   <div>
-                    <small className="mr-2 whitespace-nowrap text-gray-400">
+                    <p className="mr-2 whitespace-nowrap text-gray-400">
                       Circulating Supply
-                    </small>
+                    </p>
                   </div>
-                  <small>18,983,850.00 BTC</small>
+                  <p>18,983,850.00 BTC</p>
                 </div>
                 <br />
                 <div>
                   <div className="flex justify-between">
                     <div>
-                      <small className="mr-2 whitespace-nowrap text-gray-400">
+                      <p className="mr-2 whitespace-nowrap text-gray-400">
                         Max Supply
-                      </small>
+                      </p>
                     </div>
                     <div>
-                      <small>21,000,000</small>
+                      <p>21,000,000</p>
                     </div>
                   </div>
                   <div className="flex justify-between">
                     <div>
-                      <small className="mr-2 whitespace-nowrap text-gray-400">
+                      <p className="mr-2 whitespace-nowrap text-gray-400">
                         Total Supply
-                      </small>
+                      </p>
                     </div>
                     <div>
-                      <small>18,983,912</small>
+                      <p>18,983,912</p>
                     </div>
                   </div>
                 </div>

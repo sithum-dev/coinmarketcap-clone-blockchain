@@ -5,6 +5,7 @@ import solana from '../../assets/solana.png'
 import Usd from '../../assets/svg/usd'
 import { useEffect, useState } from 'react'
 import Graph from '../../components/Graph'
+import Head from 'next/head'
 // import Chat from '../../components/Chat'
 
 const Currencies = () => {
@@ -27,6 +28,10 @@ const Currencies = () => {
 
   return (
     <div className="min-h-screen">
+      <Head>
+        <title>{coinName} price today</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Header />
       <main className="mx-auto max-w-screen-2xl px-6 text-white">
         <CoinDetails
