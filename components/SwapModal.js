@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { CoinMarketContext } from '../context/context'
+import { XIcon } from '@heroicons/react/solid'
 
 const SwapModal = () => {
   const {
@@ -18,12 +19,12 @@ const SwapModal = () => {
 
   if (openBuyCryptoModal)
     return (
-      <div className="fixed top-0 left-0 z-10 flex h-screen w-screen items-center justify-center bg-gray-900/90">
-        <div className="w-1/3 rounded-lg bg-white p-3">
-          <div className="flex items-center justify-between">
-            <p className="text-3xl font-bold">Swap your crypto</p>
-            <p
-              className="cursor-pointer text-gray-600 hover:text-red-300"
+      <div className="fixed top-0 left-0 z-10 flex h-screen w-screen items-center justify-center bg-[#0a1e42]/30">
+        <div className="w-1/3 rounded-2xl bg-[#222531] p-6 text-white">
+          <div className="flex items-center justify-between ">
+            <p className="text-3xl font-bold">Swap Your Crypto</p>
+            <div
+              className="cursor-pointer text-gray-600 hover:text-gray-300"
               onClick={() => {
                 setOpenBuyCryptoModal(false)
                 setAmount(0)
@@ -31,16 +32,19 @@ const SwapModal = () => {
                 setToToken('')
               }}
             >
-              close &times;
-            </p>
+              <XIcon className="h-6 w-6" />
+            </div>
           </div>
-          <div className="mb-5" />
-          <label htmlFor="fromToken" className="mb-2 ml-2 block">
+          <div className="mb-6" />
+          <label
+            htmlFor="fromToken"
+            className="mb-2 ml-2 block text-sm font-bold"
+          >
             From
           </label>
           <select
             name="fromToken"
-            className="mb-5 w-full rounded-lg border border-gray-600/50 p-2 outline-none"
+            className="mb-5 w-full rounded-md bg-[#171924] px-3 py-4 text-lg outline-none"
             placeholder="Token to swap"
             onChange={(e) => setFromToken(e.target.value)}
             value={fromToken}
@@ -56,12 +60,15 @@ const SwapModal = () => {
             })}
             <option value="ETH">ETH</option>
           </select>
-          <label htmlFor="fromToken" className="mb-2 ml-2 block">
+          <label
+            htmlFor="fromToken"
+            className="mb-2 ml-2 block text-sm font-bold"
+          >
             To
           </label>
           <select
             name="toToken"
-            className="mb-5 w-full rounded-lg border border-gray-600/50 p-2 outline-none"
+            className="mb-5 w-full rounded-md bg-[#171924] px-3 py-4 text-lg outline-none"
             placeholder="Token to swap"
             onChange={(e) => setToToken(e.target.value)}
             value={toToken}
@@ -76,19 +83,19 @@ const SwapModal = () => {
               }
             })}
           </select>
-          <label htmlFor="amount" className="mb-2 ml-2 block">
+          <label htmlFor="amount" className="mb-2 ml-2 block text-sm font-bold">
             Amount
           </label>
           <input
             name="amount"
-            className="mb-5 w-full rounded-lg border border-gray-600/50 p-2 outline-none"
+            className="mb-5 w-full rounded-md bg-[#171924] px-3 py-4 text-lg outline-none"
             placeholder="Token to swap"
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
           />
 
           <button
-            className="rounded-lg bg-[#6188FF] p-2 px-5 text-white hover:opacity-50"
+            className="my-3 w-full rounded-lg bg-blue-600 p-2 px-5 text-lg text-white hover:opacity-50"
             onClick={mint}
           >
             Swap!
