@@ -1,3 +1,5 @@
+import { useContext } from 'react'
+import { CoinMarketContext } from '../../context/context'
 import Image from 'next/image'
 import btc from '../../assets/btc.png'
 import eth from '../../assets/eth.png'
@@ -11,6 +13,8 @@ import avalanche from '../../assets/avalanche.png'
 import bnb from '../../assets/bnb.png'
 
 const CoinNameRow = ({ name, icon, clicked }) => {
+  const { openModal } = useContext(CoinMarketContext)
+
   const coinIcon = () => {
     switch (name) {
       case 'Bitcoin':
@@ -142,7 +146,10 @@ const CoinNameRow = ({ name, icon, clicked }) => {
       </div>
       <p className="hidden md:block">
         {name === 'Bitcoin' || name === 'Ethereum' || name === 'Tether' ? (
-          <span className="cursor-pointer rounded-lg bg-[#1A1F3A] p-1 px-3 text-sm text-[#6188FF] hover:opacity-50">
+          <span
+            className="cursor-pointer rounded-lg bg-[#1A1F3A] p-1 px-3 text-sm text-[#6188FF] hover:opacity-50"
+            onClick={() => openModal()}
+          >
             Buy
           </span>
         ) : (

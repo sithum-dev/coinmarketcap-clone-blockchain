@@ -17,13 +17,13 @@ export const CoinMarketContext = createContext()
 
 const { isAuthenticated, user, Moralis } = useMoralis()
 
-const { data: coins, error, isLoading: loadingCoins } = useMoralisQuery('Coins')
-
 const [currentAccount, setCurrentAccount] = useState('')
 const [openBuyCryptoModal, setOpenBuyCryptoModal] = useState(false)
 const [fromToken, setFromToken] = useState('ETH')
 const [toToken, setToToken] = useState('')
 const [amount, setAmount] = useState('')
+
+const { data: coins, error, isLoading: loadingCoins } = useMoralisQuery('Coins')
 
 useEffect(() => {
   if (isAuthenticated) {
