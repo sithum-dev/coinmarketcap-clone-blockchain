@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Trending from '../components/Trending'
 import CmcTable from '../components/cmc-table/CmcTable'
+import SwapModal from '../components/SwapModal'
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
         <Trending />
         <div className="mt-10 " />
         <CmcTable />
+        <SwapModal />
       </main>
     </div>
   )

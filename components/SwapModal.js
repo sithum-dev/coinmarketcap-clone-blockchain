@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { CoinMarketContext } from '../context/context'
 
-const SwapCryptoModal = () => {
+const SwapModal = () => {
   const {
     openBuyCryptoModal,
     setOpenBuyCryptoModal,
@@ -100,4 +100,4 @@ const SwapCryptoModal = () => {
   return <></>
 }
 
-export default SwapCryptoModal
+export default SwapModal
