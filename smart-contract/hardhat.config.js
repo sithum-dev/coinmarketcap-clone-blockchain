@@ -5,7 +5,7 @@ module.exports = {
   networks: {
     rinkeby: {
       url: process.env.SPEEDY_NODE,
-      asscounts: [process.env.ACCOUNT],
+      accounts: [process.env.ACCOUNT],
     },
   },
 }
