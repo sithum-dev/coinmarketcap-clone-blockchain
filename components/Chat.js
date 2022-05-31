@@ -51,8 +51,6 @@ const Chat = () => {
       messageId: Date.now(),
     }
 
-    console.log(newMessage)
-
     messagesRef.set(newMessage)
     setMessage('')
   }

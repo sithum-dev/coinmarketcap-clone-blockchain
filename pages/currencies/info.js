@@ -6,7 +6,7 @@ import Usd from '../../assets/svg/usd'
 import { useEffect, useState } from 'react'
 import Graph from '../../components/Graph'
 import Head from 'next/head'
-// import Chat from '../../components/Chat'
+import Chat from '../../components/Chat'
 
 const Currencies = () => {
   const [coinName, setCoinName] = useState('')
@@ -94,7 +94,9 @@ const Currencies = () => {
             />
           </div>
 
-          <div className="ml-5 pt-10">{/* <Chat /> */}</div>
+          <div className="ml-5 pt-10">
+            <Chat />
+          </div>
         </div>
       </main>
     </div>
