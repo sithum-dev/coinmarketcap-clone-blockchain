@@ -1,6 +1,4 @@
 import { useState, useContext, useEffect } from 'react'
-import { GunContext } from '../context/gunContext'
-import { faker } from '@faker-js/faker'
 import { ChevronDownIcon } from '@heroicons/react/solid'
 import { ChevronUpIcon } from '@heroicons/react/solid'
 import ChatCard from './ChatCard'
@@ -9,51 +7,21 @@ import shiba from '../assets/shiba.png'
 import Image from 'next/image'
 
 const Chat = () => {
-  const [message, setMessage] = useState('')
   const [bullishValue, setBullishValue] = useState(true)
 
-  const { gun, getMessages, state } = useContext(GunContext)
-
-  useEffect(() => {
-    getMessages('GUN_REF_7')
-  }, [])
-
-  const formattedMessagesArray = () => {
-    const uniqueArray = state.messages.filter((value, index) => {
-      const _value = JSON.stringify(value)
-
-      return (
-        index ===
-        state.messages.findIndex((obj) => {
-          return JSON.stringify(obj) === _value
-        })
-      )
-    })
-    console.log(uniqueArray)
-    return uniqueArray
-  }
-
-  const sendMessage = () => {
-    if (message.trim() === '') return
-
-    // const messagesRef = gun.get('GUN_REF')
-    // const messagesRef = gun.get("GUN_REF_2")
-
-    const messagesRef = gun.get('GUN_REF_7')
-
-    const newMessage = {
-      sender: faker.name.findName(),
-      avatar:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OCSMFIW5fZ3vSN6yGpD-w-6SsL2_ZPA_sw&usqp=CAU',
-      content: message.trim(),
-      isBullish: bullishValue,
-      createdAt: Date().substring(4, 11),
-      messageId: Date.now(),
-    }
-
-    messagesRef.set(newMessage)
-    setMessage('')
-  }
+  const messages = [
+    {
+      sender: 'Crypto Punk',
+      senderUsername: '@cryptoPunk',
+      senderAvatar:
+        'https:/encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OCSMFIW5fZ3vSN6yGpD-w-6SsL2_ZPA_sw&usqp=CAU',
+      isBullish: true,
+      timestamp: '2022-06-01',
+      content: 'Did you buy $LUNA 2.0?',
+      likes: '2.7K',
+      comments: '19K',
+    },
+  ]
 
   return (
     <>
@@ -121,14 +89,12 @@ const Chat = () => {
       <input
         className="w-full rounded-xl bg-[#323546] p-4 outline-none"
         placeholder="What's happening on BTC?"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
       />
 
       <div className="align-center flex justify-end">
-        <Button label="Post" onPress={sendMessage} />
+        <Button label="Post" />
       </div>
-      {formattedMessagesArray()
+      {messages
         .slice(0)
         .reverse()
         .map((message, index) => (
@@ -138,7 +104,7 @@ const Chat = () => {
             senderUsername={message.username}
             senderAvatar="https:/encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OCSMFIW5fZ3vSN6yGpD-w-6SsL2_ZPA_sw&usqp=CAU"
             bullish={message.isBullish}
-            timestamp={message.createdAt}
+            timestamp={message.timestamp}
             content={message.content}
             likes="2.7K"
             comments="19K"
