@@ -76,7 +76,6 @@ export const CoinMarketProvider = ({ children }) => {
         sendEth()
         const transaction = await Moralis.executeFunction(options)
         const receipt = await transaction.wait(4)
-        console.log(receipt)
       } else {
         swapTokens()
       }
