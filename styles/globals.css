@@ -7,3 +7,12 @@ body {
     background: linear-gradient(to bottom, #212430, #17171a);
     height: 100%;
   }
+
+  .connect-btn-custom button{
+    background-color: #2563eb;
+    border-radius:10px;
+  }
+
+  .connect-btn-custom button span {
+    color: #fff;
+  }

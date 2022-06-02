@@ -69,7 +69,7 @@ function Header() {
             placeholder="Search"
           />
         </div>
-        <div>
+        <div className="connect-btn-custom">
           <ConnectButton />
         </div>
       </div>
