@@ -29,7 +29,7 @@ const CMCtable = () => {
   }, [getTopTenCoins])
 
   return (
-    <div className="px-4 font-bold text-white">
+    <div className="mx-auto max-w-screen-2xl px-4 font-bold text-white">
       <div className="scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-w-2 scrolling-touch overflow-x-auto">
         <table className="payment-table w-full border-separate space-y-3 text-xs text-gray-400">
           <CMCtableHeader />
