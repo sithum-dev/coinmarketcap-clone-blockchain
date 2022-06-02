@@ -10,7 +10,7 @@ const CMCtable = () => {
 
   useEffect(() => {
     setData()
-  }, [])
+  }, [getTopTenCoins])
 
   const setData = useCallback(async () => {
     try {
@@ -28,6 +28,7 @@ const CMCtable = () => {
     }
   }, [getTopTenCoins])
 
+  console.log(coinData)
 
   return (
     <div className="px-4 font-bold text-white">
