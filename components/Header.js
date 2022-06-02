@@ -6,13 +6,13 @@ import { ConnectButton } from 'web3uikit'
 function Header() {
   const [isModalOpen, setModalOpen] = useState(false)
   return (
-    <div className="flex h-20 w-full justify-between gap-[100px] bg-[#17171A] p-7 text-white md:p-[30px]">
+    <div className="flex h-20 w-full justify-between gap-[50px] bg-[#17171A] p-6 text-white md:p-[25px]">
       {/* Logo */}
       <Image
         src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
         alt="logo"
-        width={220}
-        height={220}
+        width={200}
+        height={100}
       />
       {/* Nav Bar */}
       <nav className="mx-auto hidden h-full max-w-screen-xl justify-center px-4 md:flex">
@@ -69,7 +69,9 @@ function Header() {
             placeholder="Search"
           />
         </div>
-        <ConnectButton />
+        <div>
+          <ConnectButton />
+        </div>
       </div>
       {/* Mobile Nav */}
       <div className="md:hidden">
