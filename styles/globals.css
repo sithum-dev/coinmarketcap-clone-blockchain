@@ -27,7 +27,8 @@ body {
     border-radius: 16px;
     border: 0px solid transparent;
     height: 100%;
-    padding: 4px 16px;
+    padding: 10px 20px;
+    margin: 0 16px;
     -webkit-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out;
   }
