@@ -139,7 +139,7 @@ const CoinNameRow = ({ name, icon, clicked }) => {
     }
   }
   return (
-    <div className="flex w-max items-center">
+    <div className="flex w-max cursor-pointer items-center">
       <div className="mr-3 flex" onClick={clicked}>
         <div className="mr-2">{coinIcon()}</div>
         <p>{name}</p>
