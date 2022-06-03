@@ -3,6 +3,13 @@ import Rate from './cmc-table/Rate'
 import fire from '../assets/fire.png'
 import btc from '../assets/btc.png'
 import usdt from '../assets/usdt.png'
+import tron from '../assets/tron.png'
+import matc from '../assets/matc.png'
+import near from '../assets/near.png'
+import sun from '../assets/sun.png'
+import apis from '../assets/apis.png'
+import mland from '../assets/mland.png'
+
 import gainers from '../assets/gainers.png'
 import recent from '../assets/recent.png'
 import TrendingCard from './TrendingCard'
@@ -35,6 +42,60 @@ const Trending = () => {
       icon: btc,
       isIncrement: true,
       rate: '2.34%',
+    },
+  ]
+
+  const bgGainers = [
+    {
+      number: 1,
+      symbol: 'TRX',
+      name: 'TRON',
+      icon: tron,
+      isIncrement: true,
+      rate: '632.84%',
+    },
+    {
+      number: 2,
+      symbol: 'MATIC',
+      name: 'Polygon',
+      icon: matc,
+      isIncrement: true,
+      rate: '332.32%',
+    },
+    {
+      number: 1,
+      symbol: 'NEAR',
+      name: 'NEAR Protocol',
+      icon: near,
+      isIncrement: true,
+      rate: '189.34%',
+    },
+  ]
+
+  const recentlyAdded = [
+    {
+      number: 1,
+      symbol: 'SUN',
+      name: 'Rising Sun',
+      icon: sun,
+      isIncrement: false,
+      rate: '19.28%',
+    },
+    {
+      number: 2,
+      symbol: 'API',
+      name: 'The APIS',
+      icon: apis,
+      isIncrement: true,
+      rate: '1.79%',
+    },
+    {
+      number: 1,
+      symbol: 'MLAND',
+      name: 'MLAND Token',
+      icon: mland,
+      isIncrement: false,
+      rate: '21.77%',
     },
   ]
 
@@ -79,12 +140,12 @@ const Trending = () => {
           <TrendingCard
             title="Biggest Gainers"
             icon={gainers}
-            trendingData={trendingData}
+            trendingData={bgGainers}
           />
           <TrendingCard
             title="Recently Added"
             icon={recent}
-            trendingData={trendingData}
+            trendingData={recentlyAdded}
           />
         </div>
       </div>
