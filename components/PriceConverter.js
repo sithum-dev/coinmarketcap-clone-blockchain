@@ -187,7 +187,7 @@ const CMCpriceConverter = ({
             {toLogo}
             <div>
               <p>{toSymbol}</p>
-              <h4>{to}</h4>
+              <h4 className="hidden md:block">{to}</h4>
             </div>
           </div>
           <p className="text-3xl">${price}</p>

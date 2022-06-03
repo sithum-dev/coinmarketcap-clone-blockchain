@@ -33,7 +33,7 @@ const Currencies = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <main className="mx-auto max-w-screen-2xl px-6 text-white">
+      <main className="mx-auto max-w-screen-2xl px-4 text-white md:px-6">
         <CoinDetails
           coinName={coinName}
           price={price}
@@ -63,7 +63,7 @@ const Currencies = () => {
             <br />
             <Graph />
             <br />
-            <div className="flex items-center justify-between">
+            <div className="grid grid-cols-1 items-center justify-between gap-2 md:flex">
               <div className="flex">
                 <div className="flex items-center">
                   <input className="outline-none" type="checkbox" /> &nbsp; USD
@@ -94,7 +94,7 @@ const Currencies = () => {
             />
           </div>
 
-          <div className="ml-5 pt-10">
+          <div className="pt-10 md:ml-5">
             <Chat />
           </div>
         </div>

@@ -39,7 +39,7 @@ const Chat = () => {
               <div>
                 <Image alt="" src={shiba} width={70} height={70} />
               </div>
-              <div className="mr-10 text-left">
+              <div className="text-left md:mr-10">
                 <b>Sithum Dev</b>
                 <p className="text-gray-400">@sithum_dev</p>
               </div>
@@ -91,7 +91,7 @@ const Chat = () => {
         placeholder="What's happening on BTC?"
       />
 
-      <div className="align-center flex justify-end">
+      <div className="align-center flex justify-center pt-2 md:justify-end">
         <Button label="Post" />
       </div>
       {messages
