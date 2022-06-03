@@ -4,6 +4,7 @@ import Header from '../components/Header'
 import Trending from '../components/Trending'
 import CmcTable from '../components/cmc-table/CmcTable'
 import SwapModal from '../components/SwapModal'
+import PostCarousel from '../components/PostCarousel'
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +16,7 @@ const Home: NextPage = () => {
       <main>
         <Header />
         <div className="md:mx-6">
+          <PostCarousel />
           <div className="mt-4 " />
           <Trending />
           <div className="mt-10 " />
