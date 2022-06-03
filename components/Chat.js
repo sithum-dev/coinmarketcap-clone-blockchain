@@ -54,7 +54,7 @@ const Chat = () => {
                 }
                 onClick={() => setBullishValue(true)}
               >
-                <ChevronUpIcon fill="#17C784" />
+                <ChevronUpIcon className="h-4 w-4" fill="#17C784" />
                 <small className="ml-1">Bullish</small>
               </div>
               &nbsp; &nbsp;
@@ -66,7 +66,7 @@ const Chat = () => {
                 }
                 onClick={() => setBullishValue(false)}
               >
-                <ChevronDownIcon fill="#a52b2b" />
+                <ChevronDownIcon className="h-4 w-4" fill="#a52b2b" />
                 <small className="ml-1">Bearish</small>
               </div>
             </div>
@@ -76,12 +76,12 @@ const Chat = () => {
 
       <div className="flex">
         <div className="text flex items-center text-green-600">
-          <ChevronUpIcon fill="#22bc64" />
+          <ChevronUpIcon className="h-4 w-4" fill="#22bc64" />
           <small className="ml-1">Bullish</small>
         </div>
         &nbsp; &nbsp;
         <div className="flex items-center text-red-500">
-          <ChevronDownIcon fill="#a52b2b" />
+          <ChevronDownIcon className="h-4 w-4" fill="#a52b2b" />
           <small className="ml-1">Bearish</small>
         </div>
       </div>
