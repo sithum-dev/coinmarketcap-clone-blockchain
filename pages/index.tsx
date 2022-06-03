@@ -14,11 +14,13 @@ const Home: NextPage = () => {
       </Head>
       <main>
         <Header />
-        <div className="mt-4 " />
-        <Trending />
-        <div className="mt-10 " />
-        <CmcTable />
-        <SwapModal />
+        <div className="mx-6">
+          <div className="mt-4 " />
+          <Trending />
+          <div className="mt-10 " />
+          <CmcTable />
+          <SwapModal />
+        </div>
       </main>
     </div>
   )

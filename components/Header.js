@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 import { SearchIcon } from '@heroicons/react/solid'
 import { ConnectButton } from 'web3uikit'
+import { useRouter } from 'next/router'
 
 function Header() {
+  const router = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
   return (
     <div className="flex h-20 w-full justify-between gap-[50px] bg-[#17171A] p-6 text-white md:p-[25px]">
@@ -13,6 +15,7 @@ function Header() {
         alt="logo"
         width={200}
         height={100}
+        onClick={() => router.push('/')}
       />
       {/* Nav Bar */}
       <nav className="mx-auto hidden h-full max-w-screen-xl justify-center px-4 md:flex">
