@@ -16,7 +16,7 @@ import TrendingCard from './TrendingCard'
 import ReactSwitch from 'react-switch'
 
 const Trending = () => {
-  const [checked, setChecked] = useState(false)
+  const [checked, setChecked] = useState(true)
 
   const trendingData = [
     {
@@ -131,23 +131,27 @@ const Trending = () => {
           </p>
         </div>
         <br />
-        <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-3">
-          <TrendingCard
-            title="Trending"
-            icon={fire}
-            trendingData={trendingData}
-          />
-          <TrendingCard
-            title="Biggest Gainers"
-            icon={gainers}
-            trendingData={bgGainers}
-          />
-          <TrendingCard
-            title="Recently Added"
-            icon={recent}
-            trendingData={recentlyAdded}
-          />
-        </div>
+        {checked ? (
+          <div className="grid grid-cols-1 items-center gap-2 md:grid-cols-3">
+            <TrendingCard
+              title="Trending"
+              icon={fire}
+              trendingData={trendingData}
+            />
+            <TrendingCard
+              title="Biggest Gainers"
+              icon={gainers}
+              trendingData={bgGainers}
+            />
+            <TrendingCard
+              title="Recently Added"
+              icon={recent}
+              trendingData={recentlyAdded}
+            />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
     </div>
   )
