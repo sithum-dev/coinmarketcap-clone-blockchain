@@ -13,6 +13,7 @@ function Header() {
       <Image
         src="https://s2.coinmarketcap.com/static/cloud/img/coinmarketcap_white_1.svg"
         alt="logo"
+        className="cursor-pointer"
         width={200}
         height={100}
         onClick={() => router.push('/')}
