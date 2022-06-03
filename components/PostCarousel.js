@@ -1,54 +1,46 @@
+import Image from 'next/image'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import 'swiper/css'
 
+import PostCard from '../components/PostCard'
 import earnTRX from '../assets/banner/earn-trx.png'
-import Image from 'next/image'
 
 function PostCarousel() {
   return (
-    <div className="mx-auto max-w-screen-2xl">
+    <div className="mx-auto max-w-screen-2xl px-2">
       <Swiper
         spaceBetween={20}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
-        slidesPerView={'auto'}
         breakpoints={{
-          // when window width is >= 640px
-          640: {
-            slidesPerView: 2,
-          },
           // when window width is >= 768px
           768: {
             slidesPerView: 5,
           },
+          0: {
+            slidesPerView: 2,
+          },
         }}
       >
         <SwiperSlide>
-          <div className="relative">
-            <Image src={earnTRX} objectFit="cover" />
-          </div>
+          <PostCard banner={earnTRX} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <Image src={earnTRX} objectFit="cover" />
-          </div>
+          <PostCard banner={earnTRX} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <Image src={earnTRX} objectFit="cover" />
-          </div>
+          <PostCard banner={earnTRX} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <Image src={earnTRX} objectFit="cover" />
-          </div>
+          <PostCard banner={earnTRX} />
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <Image src={earnTRX} objectFit="cover" />
-          </div>
+          <PostCard banner={earnTRX} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <PostCard banner={earnTRX} />
         </SwiperSlide>
       </Swiper>
     </div>

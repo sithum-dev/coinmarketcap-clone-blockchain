@@ -16,8 +16,9 @@ const Home: NextPage = () => {
       <main>
         <Header />
         <div className="md:mx-6">
+          <div className="mt-6 " />
           <PostCarousel />
-          <div className="mt-4 " />
+          <div className="mt-6 " />
           <Trending />
           <div className="mt-10 " />
           <CmcTable />
