@@ -3,16 +3,59 @@ import { useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 // Import Swiper styles
 import 'swiper/css'
-
 import { ChevronRightIcon, ChevronLeftIcon } from '@heroicons/react/solid'
-
 import PostCard from '../components/PostCard'
+//Banner Images
 import earnTRX from '../assets/banner/earn-trx.png'
+import wallet from '../assets/banner/wallet.png'
+import srd from '../assets/banner/srd.png'
+import airDrop from '../assets/banner/air-drop.png'
+import api from '../assets/banner/api.png'
+import timeToShip from '../assets/banner/time-to-ship.png'
+import track from '../assets/banner/track.png'
 
 function PostCarousel() {
   const [swiper, setSwiper] = useState(null)
   const [navNextStatus, setNavNextStatus] = useState(true)
   const [navPreviousStatus, setNavPreviousStatus] = useState(false)
+
+  const banners = [
+    {
+      banner: earnTRX,
+      category: 'Learn & Earn!',
+      title: 'Learn About "TRON" & Earn $TRX!',
+    },
+    {
+      banner: wallet,
+      category: 'The Capital Conference',
+      title: 'Re-Watch All Keynotes & Panels',
+    },
+    {
+      banner: srd,
+      category: 'Self Reporting',
+      title: 'Self-Reporting Dashboard (SRD)',
+    },
+    {
+      banner: airDrop,
+      category: 'Free Airdrop!',
+      title: 'Join "Equilibrium" $50K Airdrop Now',
+    },
+    {
+      banner: api,
+      category: 'API Sponsorship',
+      title: 'Get Free CoinMarketCap API',
+    },
+    {
+      banner: timeToShip,
+      category: 'Time to Ship',
+      title: 'CoinMarketCap Conference Recap',
+    },
+    {
+      banner: track,
+      category: 'CoinMarketCap Portfolio',
+      title: 'Track Your Token Profits!',
+    },
+  ]
 
   const nexto = () => {
     swiper.slideNext()
@@ -47,30 +90,17 @@ function PostCarousel() {
             },
           }}
         >
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
-          <SwiperSlide>
-            <PostCard banner={earnTRX} />
-          </SwiperSlide>
+          {banners.map((banner, key) => {
+            return (
+              <SwiperSlide key={key}>
+                <PostCard
+                  banner={banner.banner}
+                  category={banner.category}
+                  title={banner.title}
+                />
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
         {navPreviousStatus && (
           <div className="absolute top-0 left-0 z-50">
