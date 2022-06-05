@@ -30,8 +30,8 @@ function PostCarousel() {
   }
 
   return (
-    <div className="mx-auto max-w-screen-2xl overflow-clip px-2 py-5">
-      <div className="relative -mr-8 pr-8 md:mr-0 md:pr-0">
+    <div className="mx-auto max-w-screen-2xl px-2 py-5">
+      <div className="relative">
         <Swiper
           spaceBetween={20}
           onSlideChange={() => siderOnChange()}
@@ -75,7 +75,7 @@ function PostCarousel() {
         {navPreviousStatus && (
           <div className="absolute top-0 left-0 z-50">
             <div
-              className="flex h-40 w-40 items-center justify-start bg-gradient-to-r from-gray-900 px-4"
+              className="flex h-44 w-12 items-center justify-start rounded-md bg-gradient-to-r from-gray-900 px-2 md:h-52 md:w-40 md:px-4"
               onClick={prevto}
             >
               <ChevronLeftIcon className="h-8 w-8 cursor-pointer rounded-full bg-gray-600 text-white" />
@@ -84,9 +84,9 @@ function PostCarousel() {
         )}
 
         {navNextStatus && (
-          <div className="absolute top-0 right-8 z-50 md:right-0">
+          <div className="absolute top-0 right-0 z-50">
             <div
-              className="flex h-40 w-40 items-center justify-end bg-gradient-to-l from-gray-900 px-4"
+              className="flex h-44 w-12 items-center justify-end rounded-md bg-gradient-to-l from-gray-900 px-2 md:h-52 md:w-40 md:px-4"
               onClick={nexto}
             >
               <ChevronRightIcon className="h-8 w-8 cursor-pointer rounded-full bg-gray-600 text-white" />
