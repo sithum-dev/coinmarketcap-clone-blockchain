@@ -103,7 +103,7 @@ function PostCarousel() {
           })}
         </Swiper>
         {navPreviousStatus && (
-          <div className="absolute top-0 left-0 z-50">
+          <div className="absolute top-0 left-0 z-40">
             <div
               className="flex h-44 w-12 items-center justify-start rounded-md bg-gradient-to-r from-gray-900 px-2 md:h-52 md:w-40 md:px-4"
               onClick={prevto}
@@ -114,7 +114,7 @@ function PostCarousel() {
         )}
 
         {navNextStatus && (
-          <div className="absolute top-0 right-0 z-50">
+          <div className="absolute top-0 right-0 z-40">
             <div
               className="flex h-44 w-12 items-center justify-end rounded-md bg-gradient-to-l from-gray-900 px-2 md:h-52 md:w-40 md:px-4"
               onClick={nexto}

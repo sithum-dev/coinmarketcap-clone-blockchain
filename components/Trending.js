@@ -36,7 +36,7 @@ const Trending = () => {
       rate: '9.32%',
     },
     {
-      number: 1,
+      number: 3,
       symbol: 'BTC',
       name: 'Bitcoin',
       icon: btc,
@@ -63,7 +63,7 @@ const Trending = () => {
       rate: '332.32%',
     },
     {
-      number: 1,
+      number: 3,
       symbol: 'NEAR',
       name: 'NEAR Protocol',
       icon: near,
@@ -87,10 +87,10 @@ const Trending = () => {
       name: 'The APIS',
       icon: apis,
       isIncrement: true,
-      rate: '1.79%',
+      rate: '11.79%',
     },
     {
-      number: 1,
+      number: 3,
       symbol: 'MLAND',
       name: 'MLAND Token',
       icon: mland,

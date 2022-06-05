@@ -78,7 +78,7 @@ function Header() {
         </div>
       </div>
       {/* Mobile Nav */}
-      <div className="md:hidden">
+      <div className="z-50 md:hidden">
         {isModalOpen ? (
           <>
             <button
