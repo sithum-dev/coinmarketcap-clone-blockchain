@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       <main>
         <Header />
         <div className="md:mx-6">
-          <div className="mt-6 " />
+          <div className="mt-4 " />
           <PostCarousel />
           <div className="mt-6 " />
           <Trending />

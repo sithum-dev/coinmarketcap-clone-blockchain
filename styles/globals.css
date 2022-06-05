@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500;600;700&display=swap');
 
 body {
     background: linear-gradient(to bottom, #212430, #17171a);
     height: 100%;
+    /* font-family: 'Inter', sans-serif; */
   }
 
   .connect-btn-custom button{
