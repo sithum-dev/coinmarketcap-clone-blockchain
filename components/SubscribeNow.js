@@ -4,7 +4,7 @@ import newsletter from '../assets/newsletter_bg_dark.svg'
 
 function SubscribeNow() {
   return (
-    <div className="bg-[#171924] py-10">
+    <div className="bg-[#171924] py-10 px-6">
       <div className="mx-auto max-w-screen-2xl flex-row items-center px-3 md:flex">
         <div>
           <h1 className="text-4xl text-white">
