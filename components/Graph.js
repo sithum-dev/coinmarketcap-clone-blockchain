@@ -9,6 +9,11 @@ const randomPoints = [
   [0, 100, 47, 19, 90, 34, 25, 65, 78, 0, 32],
 ]
 
+/**
+ * It returns a random number between 1 and 4, then uses that number to return a value from the
+ * randomPoints object.
+ * @returns An array of objects.
+ */
 const getRandomPoints = () => {
   const rndInt = Math.floor(Math.random() * 4) + 1
   return randomPoints[rndInt]
