@@ -5,6 +5,7 @@ import Trending from '../components/Trending'
 import CmcTable from '../components/cmc-table/CmcTable'
 import SwapModal from '../components/SwapModal'
 import PostCarousel from '../components/PostCarousel'
+import SubscribeNow from '../components/SubscribeNow'
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +25,8 @@ const Home: NextPage = () => {
           <CmcTable />
           <SwapModal />
         </div>
+        <div className="mt-10 " />
+        <SubscribeNow />
       </main>
     </div>
   )
